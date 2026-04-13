@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg,#020617,#0f172a);
+  color: white;
+}
+
+/* CENTER */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* LOGIN BOX */
+.login-box {
+  background: rgba(30,41,59,0.8);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  width: 300px;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  padding: 10px;
+  margin: 8px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  width: 220px;
+  height: 100%;
+  background: #020617;
+  padding: 20px;
+}
+
+.main {
+  margin-left: 240px;
+  padding: 20px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* POPUP */
+.glass-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(59,130,246,0.3);
+  padding: 15px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+/* LIGHT MODE */
+body.light {
+  background: #f1f5f9;
+  color: black;
+}
+
+/* HIDDEN */
+.hidden {
+  display: none;
+}
+
+/* LIGHT MODE FULL FIX */
+body.light {
+  background: #f1f5f9;
+  color: #000;
+}
+
+/* SIDEBAR */
+body.light .sidebar {
+  background: #ffffff;
+  color: #000;
+}
+
+/* CARD */
+body.light .card {
+  background: #ffffff;
+  color: #000;
+}
+
+/* LOGIN BOX */
+body.light .login-box {
+  background: rgba(255,255,255,0.9);
+  color: #000;
+}
+
+/* BUTTON */
+body.light button {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* INPUT */
+body.light input {
+  background: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+/* TEXT */
+body.light h2,
+body.light h3,
+body.light p {
+  color: #000;
+}
+
+* {
+  transition: all 0.3s ease;
+}

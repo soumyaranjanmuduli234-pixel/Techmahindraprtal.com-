@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tech Mahindra Portal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="loginPage" class="center">
+  <div class="login-box">
+    <img src="logo.png" class="logo">
+
+    <h2>Login</h2>
+    <input id="loginId" placeholder="User ID">
+    <input id="loginPass" type="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+    <button onclick="checkAdmin()">Admin Register</button>
+
+    <div id="loginMsg"></div>
+  </div>
+</div>
+
+<!-- REGISTER -->
+<div id="registerPage" class="center hidden">
+  <div class="login-box">
+    <img src="logo.png" class="logo">
+
+    <h2>Create Employee</h2>
+
+    <input id="regName" placeholder="Name">
+    <input id="regRole" placeholder="Role">
+    <input id="regPhone" placeholder="Phone">
+    <input id="regDob" type="date">
+    <input id="regPass" placeholder="Password">
+
+    <button onclick="registerEmp()">Create</button>
+    <button onclick="backLogin()">Back</button>
+
+    <div id="genResult"></div>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="hidden">
+
+<div class="sidebar">
+  <img src="logo.png" class="logo">
+  <h3>Tech Mahindra</h3>
+
+  <button onclick="showPage('home', event)">Home</button>
+  <button onclick="showPage('employees', event)">Employees</button>
+  <button onclick="showPage('attendance', event)">Attendance</button>
+  <button onclick="showPage('report', event)">Report</button>
+  <button onclick="toggleTheme()">🌙/☀️</button>
+  <button onclick="logout()">Logout</button>
+</div>
+
+<div class="main">
+
+<div id="homePage"></div>
+
+<div id="employeesPage" class="hidden">
+  <div id="empList"></div>
+</div>
+
+<div id="attendancePage" class="hidden">
+  <div id="attendanceList"></div>
+</div>
+
+<div id="reportPage" class="hidden">
+  <button onclick="downloadReport()">Download Monthly Report</button>
+</div>
+
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
